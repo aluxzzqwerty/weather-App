@@ -48,7 +48,7 @@ const getGeoWeather = (event) => {
 };
 
 const geoError = (errObj) => {
-    const errMsg = errObj ? errObj.message : "Geolocation not supported";
+    const errMsg = errObj ? "Да вруби ты геолокацию вначале даун, не бойся нафиг мне твоя геолокация" : "Geolocation not supported";
     displayError(errMsg, errMsg);
 };
 
@@ -67,7 +67,7 @@ const loadWeather = (event) => {
     if (!savedLocation && !event) return getGeoWeather();
     if (!savedLocation && event.type === "click") {
         displayError(
-            "No Home Location Saved.",
+            "Ты не засейвил свою домашнюю локацию придурок",
             "Sorry. Please save your home location first."
         );
     } else if (savedLocation && !event) {
@@ -143,7 +143,7 @@ const submitNewLocation = async (event) => {
         }
     }
     else {
-        displayError("Connection Error", "Connection Error");
+        displayError("Траблы с сетью даун", "Траблы с сетью даун");
     }
 }
 

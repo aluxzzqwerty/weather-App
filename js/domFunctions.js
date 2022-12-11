@@ -46,12 +46,26 @@ export const updateDisplay = (weatherJson, locationObj) => {
     const ccArray = createCurrentConditionsDivs(weatherJson, locationObj.getUnit());
 
     displayCurrentConditions(ccArray);
+    displayCommentByTemp(weatherJson.list[0].main.temp);
 
     // daily forecast
     displaySixDayForecast(weatherJson);
 
+
+
     setFocusOnSearch();
     fadeDisplay();
+}
+
+// additional func
+const displayCommentByTemp = (temp) => {
+    const comment = document.querySelector(".comment");
+    if (temp < 0) {
+        comment.textContent = "Пипец дубак котин жыла уста!";
+    }
+    else if (temp > 0) {
+        comment.textContent = "Ля тут тепло, щас бы на море((";
+    }
 }
 
 const fadeDisplay = () => {

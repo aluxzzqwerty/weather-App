@@ -1,0 +1,93 @@
+.currentForecast {
+
+    &__location {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 100;
+        margin-bottom: 1rem;
+    }
+
+    &__conditions {
+        font-size: 1.3rem;
+        width: 100%;
+        margin: auto auto 2rem;
+        display: grid;
+
+        .temp {
+            @include flexCenter;
+            grid-row: 1 / span 3;
+            grid-column: 1 / span 2;
+            font-size: 6rem;
+            text-shadow: 1px 0 4px $text-shadow-color;
+            position: relative;
+
+            .unit {
+                font-size: 1.7rem;
+                text-shadow: none;
+                color: $fadecolor;
+                position: absolute;
+                top: 55%;
+                left: 85%;
+            }
+        }
+
+        .icon {
+            @include flexCenter;
+            grid-row: 1 / span 1;
+            grid-column: 3 / span 2;
+
+            i {
+                font-size: 3rem;
+                text-shadow: 1px 0 4px $text-shadow-color;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        .maxtemp {
+            @include flexCenter;
+            grid-row: 2 / span 1;
+            grid-column: 3 / span 2;
+        }
+
+        .mintemp {
+            @include flexCenter;
+            align-self: start;
+            grid-row: 3 / span 1;
+            grid-column: 3 / span 2;
+            color: $fadecolor;
+        }
+
+        .desc {
+            @include flexCenter;
+            grid-row: 4 / span 1;
+            grid-column: 1 / span 4;
+            padding-top: 0.5rem;
+        }
+
+        .feels {
+            @include flexCenter;
+            grid-row: 5 / span 1;
+            grid-column: 1 / span 4;
+            padding-top: 0.5rem;
+            font-weight: normal;
+        }
+
+        .humidity {
+            @include flexCenter;
+            grid-row: 6 / span 1;
+            grid-column: 1 / span 4;
+            padding-top: 0.5rem;
+            font-weight: normal;
+            color: $fadecolor;
+        }
+
+        .wind {
+            @include flexCenter;
+            grid-row: 7 / span 1;
+            grid-column: 1 / span 4;
+            padding-top: 0.5rem;
+            font-weight: normal;
+            color: $fadecolor;
+        }
+    }
+}

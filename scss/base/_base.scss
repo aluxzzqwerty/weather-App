@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: $background-color;
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $font-color;
+    background-image: url(../img/clouds.jpg);
+    background-size: cover;
+    background-blend-mode: saturation;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    @include flexCenter;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: $font-color;
+    border: 1px solid $bordercolor;
+    border-radius: 10px;
+}
+
+img {
+    display: block;
+}
+
+.block {
+    display: block;
+}
+
+.none {
+    display: none;
+}
+
+.offscreen {
+    position: absolute;
+    top: -1000000px;
+}

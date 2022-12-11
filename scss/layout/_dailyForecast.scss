@@ -1,0 +1,20 @@
+.dailyForecast {
+    font-size: 1.5rem;
+    text-align: center;
+    flex: 1;
+
+    &__contents {
+        
+        @include flexCenter;
+        justify-content: space-evenly;
+        color: $font-color;
+        padding: 0.5rem;
+
+        .forecastDay {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    }
+}

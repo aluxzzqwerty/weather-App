@@ -1,0 +1,17 @@
+.button {
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: 50%;
+    outline: none;
+    background-color: $button-color;
+    color: $font-color;
+    font-size: 1.25rem;
+    font-weight: 900;
+    border: 1px solid $font-color;
+
+    &:hover, &:focus {
+        box-shadow: 0 2px 4px $shadowcolor;
+        cursor: pointer;
+    }
+}
+

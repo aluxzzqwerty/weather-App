@@ -15,7 +15,6 @@ import CurrentLocation from "./CurrentLocation.js";
 const currentLoc = new CurrentLocation();
 
 const initApp = () => {
-    // add listeners
     const geoButton = document.getElementById("getLocation");
     geoButton.addEventListener("click", getGeoWeather);
     const homeButton = document.getElementById("home");
@@ -31,8 +30,6 @@ const initApp = () => {
     const locationEntry = document.getElementById("searchBar__form");
     locationEntry.addEventListener("submit", submitNewLocation);
 
-    // set up
-    // load weather
     loadWeather();
 };
 
@@ -48,7 +45,7 @@ const getGeoWeather = (event) => {
 };
 
 const geoError = (errObj) => {
-    const errMsg = errObj ? "Да вруби ты геолокацию вначале даун, не бойся нафиг мне твоя геолокация" : "Geolocation not supported";
+    const errMsg = errObj ? errObj.message : "Geolocation not supported";
     displayError(errMsg, errMsg);
 };
 
@@ -67,7 +64,7 @@ const loadWeather = (event) => {
     if (!savedLocation && !event) return getGeoWeather();
     if (!savedLocation && event.type === "click") {
         displayError(
-            "Ты не засейвил свою домашнюю локацию придурок",
+            "Home location is not saved",
             "Sorry. Please save your home location first."
         );
     } else if (savedLocation && !event) {
@@ -143,12 +140,11 @@ const submitNewLocation = async (event) => {
         }
     }
     else {
-        displayError("Траблы с сетью даун", "Траблы с сетью даун");
+        displayError("Connection error", "Connection error");
     }
 }
 
 const updateDataAndDisplay = async (locationObj) => {
     const weatherJson = await getWeatherFromCoords(locationObj);
-    console.log(weatherJson);
     if (weatherJson) updateDisplay(weatherJson, locationObj);
 };

@@ -11,7 +11,7 @@ html {
     font-size: 100%;
     font-family: Arial, Helvetica, sans-serif;
     color: $font-color;
-    background-image: url(../img/clouds.jpg);
+    background-image: url("../dist/img/clouds.jpg");
     background-size: cover;
     background-blend-mode: saturation;
 }

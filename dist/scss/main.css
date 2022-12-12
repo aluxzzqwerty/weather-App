@@ -18,7 +18,7 @@ html {
   font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
   color: #fff;
-  background-image: url("../dist/img/clouds.jpg");
+  background-image: url("../img/clouds.jpg");
   background-size: cover;
   background-blend-mode: saturation;
 }
@@ -272,33 +272,27 @@ img {
   align-items: center;
 }
 
-.comment {
-  text-align: center;
-  font-size: 1.3rem;
-  font-style: italic;
-}
-
 .rain {
   background-color: rgba(0, 0, 255, 0.5);
-  background-image: url("../dist/img/rain.jpg");
+  background-image: url("../img/rain.jpg");
 }
 
 .snow {
   background-color: rgba(0, 0, 255, 0.5);
-  background-image: url("../dist/img/snow.jpg");
+  background-image: url("../img/snow.jpg");
 }
 
 .night {
   background-color: rgba(204, 0, 102, 0.5);
-  background-image: url("../dist/img/night.jpg");
+  background-image: url("../img/night.jpg");
 }
 
 .fog {
   background-color: darkslategray;
-  background-image: url("../dist/img/fog.jpg");
+  background-image: url("../img/fog.jpg");
 }
 
 .clouds {
   background-color: rgba(0, 0, 255, 0.5);
-  background-image: url("../dist/img/clouds.jpg");
+  background-image: url("../img/clouds.jpg");
 }/*# sourceMappingURL=main.css.map */

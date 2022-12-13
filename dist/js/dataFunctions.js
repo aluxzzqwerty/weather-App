@@ -72,7 +72,7 @@ export const getCoordsFromApi = async (entryText, units) => {
     };
 
     try {
-        const dataStream = fetch("./.netlify/serverless/get_coords", {
+        const dataStream = fetch("./.netlify/functions/get_coords", {
             method: "POST",
             body: JSON.stringify(urlDataObj)
         });

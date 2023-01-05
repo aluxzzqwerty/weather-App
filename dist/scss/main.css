@@ -60,6 +60,10 @@ img {
   top: -1000000px;
 }
 
+.button-container {
+  text-align: center;
+}
+
 .button {
   min-width: 48px;
   min-height: 48px;
@@ -74,6 +78,10 @@ img {
 .button:hover, .button:focus {
   box-shadow: 0 2px 4px #fff;
   cursor: pointer;
+}
+
+.button-text {
+  margin-top: 10px;
 }
 
 .zero-vis {

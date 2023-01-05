@@ -47,38 +47,51 @@
         <div
           id="currentForecast__conditions"
           class="currentForecast__conditions"
-        >
-        </div>
+        ></div>
       </section>
       <section class="comment"></section>
       <nav id="navButtons" class="navButtons fade-in">
-        <button id="getLocation" class="button">
-          <i class="fas fa-map-marker-alt"></i>
-          <i class="fas fa-sync fa-spin none"></i>
-        </button>
-        <button id="home" class="button">
-          <i class="fas fa-home"></i>
-          <i class="fas fa-sync fa-spin none"></i>
-        </button>
-        <button id="saveLocation" class="button">
-          <i class="fas fa-save"></i>
-          <i class="fas fa-sync fa-spin none"></i>
-        </button>
-        <button id="unit" class="button">
-          <i class="fas fa-chart-bar"></i>
-          <i class="fas fa-sync fa-spin none"></i>
-        </button>
-        <button id="refresh" class="button">
-          <i class="fas fa-sync-alt"></i>
-          <i class="fas fa-sync fa-spin none"></i>
-        </button>
+        <div class="button-container">
+          <button id="getLocation" class="button">
+            <i class="fas fa-map-marker-alt"></i>
+            <i class="fas fa-sync fa-spin none"></i>
+          </button>
+          <p class="button-text">Current location</p>
+        </div>
+        <div class="button-container">
+          <button id="home" class="button">
+            <i class="fas fa-home"></i>
+            <i class="fas fa-sync fa-spin none"></i>
+          </button>
+          <p class="button-text">Home location</p>
+        </div>
+        <div class="button-container">
+          <button id="saveLocation" class="button">
+            <i class="fas fa-save"></i>
+            <i class="fas fa-sync fa-spin none"></i>
+          </button>
+          <p class="button-text">Save location</p>
+        </div>
+        <div class="button-container">
+          <button id="unit" class="button">
+            <i class="fas fa-chart-bar"></i>
+            <i class="fas fa-sync fa-spin none"></i>
+          </button>
+          <p class="button-text">Change metric</p>
+        </div>
+        <div class="button-container">
+          <button id="refresh" class="button">
+            <i class="fas fa-sync-alt"></i>
+            <i class="fas fa-sync fa-spin none"></i>
+          </button>
+          <p class="button-text">Restart location</p>
+        </div>
       </nav>
       <section id="dailyForecast" class="dailyForecast fade-in">
         <h2 id="dailyForecast__title" class="dailyForecast__title offscreen">
           6 Day Forecast
         </h2>
-        <div id="dailyForecast__contents" class="dailyForecast__contents">
-        </div>
+        <div id="dailyForecast__contents" class="dailyForecast__contents"></div>
       </section>
       <p id="confirmation" class="offscreen" aria-live="assertive"></p>
     </main>
